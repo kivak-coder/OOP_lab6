@@ -4,7 +4,7 @@
 
 struct Dragon : public NPC
 {
-    Dragon(int x, int y);
+    Dragon(int x, int y, const std::string& name);
     Dragon(std::istream &is);
 
     void print() override;

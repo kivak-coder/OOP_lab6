@@ -4,7 +4,7 @@
 
 struct Knight : public NPC
 {
-    Knight(int x, int y);
+    Knight(int x, int y, const std::string& name);
     Knight(std::istream &is);
 
     void print() override;

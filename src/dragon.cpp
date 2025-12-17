@@ -3,7 +3,7 @@
 #include "../include/pegasus.hpp"
 #include <memory>
 
-Dragon::Dragon(int x, int y) : NPC(DragonType, x, y) {}
+Dragon::Dragon(int x, int y, const std::string& name) : NPC(DragonType, x, y, name) {}
 Dragon::Dragon(std::istream &is) : NPC(DragonType, is) {}
 
 void Dragon::print()

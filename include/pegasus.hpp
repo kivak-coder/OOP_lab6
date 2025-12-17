@@ -3,7 +3,7 @@
 
 struct Pegasus : public NPC
 {
-    Pegasus(int x, int y);
+    Pegasus(int x, int y, const std::string& name);
     Pegasus(std::istream &is);
 
     void print() override;

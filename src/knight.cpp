@@ -3,7 +3,7 @@
 #include "../include/dragon.hpp"
 #include <memory>
 
-Knight::Knight(int x, int y) : NPC(KnightType, x, y) {}
+Knight::Knight(int x, int y, const std::string&name) : NPC(KnightType, x, y, name) {}
 Knight::Knight(std::istream &is) : NPC(KnightType, is) {}
 
 void Knight::print()

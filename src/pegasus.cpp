@@ -3,7 +3,8 @@
 #include "../include/knight.hpp"
 #include <memory>
 
-Pegasus::Pegasus(int x, int y) : NPC(PegasusType, x, y) {}
+Pegasus::Pegasus(int x, int y, const std::string& name) : NPC(PegasusType, x, y, name) {}
+
 Pegasus::Pegasus(std::istream &is) : NPC(PegasusType, is) {}
 
 void Pegasus::print()
@@ -40,8 +41,8 @@ bool Pegasus::accept(std::shared_ptr<NPC> other) {
     return other->fight(std::static_pointer_cast<Pegasus>(shared_from_this()));
 }
 
-std::ostream &operator<<(std::ostream &os, Pegasus &knight)
+std::ostream &operator<<(std::ostream &os, Pegasus &pegasus)
 {
-    os << "pegasus: " << *static_cast<NPC *>(&knight) << std::endl;
+    os << "pegasus: " << *static_cast<NPC *>(&pegasus) << std::endl;
     return os;
 }
